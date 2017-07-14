@@ -38,34 +38,40 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="fa fa-check-square"></i></span>
+                        <a href="{{ route('managetickets.closed') }}">
+                            <span class="info-box-icon bg-green"><i class="fa fa-check-square"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Closed Tickets</span>
-                            <span class="info-box-number">{{ $count_closed_ticket }}</span>
-                        </div>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Closed Tickets</span>
+                                <span class="info-box-number">{{ $count_closed_ticket }}</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="fa fa-folder"></i></span>
+                        <a href="{{ route('managetickets.inprogress') }}">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-folder"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">In Progress</span>
-                            <span class="info-box-number">{{ $count_inprogress_ticket }}</span>
-                        </div>
+                            <div class="info-box-content">
+                                <span class="info-box-text">In Progress</span>
+                                <span class="info-box-number">{{ $count_inprogress_ticket }}</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-history"></i></span>
+                        <a href="{{ route('managetickets.reopened') }}">
+                            <span class="info-box-icon bg-red"><i class="fa fa-history"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Reopened</span>
-                            <span class="info-box-number">{{ $count_reopened_ticket }}</span>
-                        </div>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Reopened</span>
+                                <span class="info-box-number">{{ $count_reopened_ticket }}</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
