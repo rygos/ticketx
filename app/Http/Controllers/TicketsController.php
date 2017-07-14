@@ -21,7 +21,7 @@ class TicketsController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('name', 'asc')->get();
         $prioritys = Priority::all();
         $statuses = Status::all();
 
