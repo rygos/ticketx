@@ -76,6 +76,28 @@
                 </div>
 
             </div>
+
+            <div class="row">
+                <div class="row-md-12">
+                    <div class="box">
+                        <div class="box header width-border">
+                            <h3>Monthly Report</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center">
+                                        <strong>Data Range: {{ \Carbon\Carbon::now() }} - {{ \Carbon\Carbon::parse(\Carbon\Carbon::now()->addMonth(-1)) }}</strong>
+                                    </p>
+                                    <div class="chart">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @endpermission
 
             <div class="row">
