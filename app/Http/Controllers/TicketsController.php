@@ -20,7 +20,7 @@ class TicketsController extends Controller
     }
 
     public function create()
-    {
+    {-
         $categories = Category::orderBy('name', 'asc')->get();
         $prioritys = Priority::all();
         $statuses = Status::all();
@@ -35,6 +35,7 @@ class TicketsController extends Controller
                     'category'  => 'required',
                     'priority'  => 'required',
                     'message'   => 'required',
+                    'serial'    => 'required'
                 ]);
 
         $ticket = new Ticket([
@@ -44,6 +45,7 @@ class TicketsController extends Controller
                     'category_id'  => $request->input('category'),
                     'priority_id'  => $request->input('priority'),
                     'message'      => $request->input('message'),
+                    'serial'       => $request->input('serial'),
                 ]);
 
         $ticket->status_id = '1';

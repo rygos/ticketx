@@ -30,6 +30,7 @@
                                 <tr>
                                     <th>Ticket ID</th>
                                     <th>Title</th>
+                                    <th>Serial</th>
                                     <th>Comments</th>
                                     <th>Category</th>
                                     <th>Status</th>
@@ -46,7 +47,8 @@
                                         <a href="{{ url('tickets/'. $ticket->ticket_id) }}">
                                             {{ $ticket->title }}
                                         </a>
-                                    </td>   
+                                    </td>
+                                    <td>{{ $ticket->serial }}</td>
                                     <td><span class="badge">{{ count($ticket->comments) }}</span></td>
                                     <td>
                                     @foreach ($categories as $category)

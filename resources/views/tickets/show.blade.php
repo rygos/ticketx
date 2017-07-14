@@ -23,7 +23,7 @@
                 <h3 class="box-title"><i class="fa fa-ticket"> #{{ $ticket->ticket_id }} - {{ $ticket->title }}</i></h3>
             </div>
             <div class="box-body">
-
+                        <p>Serial: {{ $ticket->serial }}</p>
                         <p>Categry: {{ $category->name }}</p>
                         <p>Status: 
                                         @if ($status->id === $ticket->status_id)

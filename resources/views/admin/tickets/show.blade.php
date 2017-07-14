@@ -33,7 +33,8 @@
                             
                                     {!! csrf_field() !!}      
                                     
-                                    <p>Message: <i><h4>{!! $ticket->message !!}</h4></i></p>
+                                    <p>Message: <i><h4>{!! $ticket->message !!}</h4></i>
+                                    <p>Serial: {{ $ticket->serial }}</p>
                                     <p>Category: {{ Form::select('category',$categories,$ticket->category_id,['class'=>'form-control'])}}</p>
                                     <p>Status: {{ Form::select('status',$statuses,$ticket->status_id,['class'=>'form-control'])}}</p>
                                     <p>Priority:{{ Form::select('priority',$prioritys,$ticket->priority_id,['class'=>'form-control'])}}</p>

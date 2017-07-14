@@ -42,6 +42,7 @@
                                 <tr>
                                     <th>Ticket ID</th>
                                     <th>Title</th>
+                                    <th>Serial</th>
                                     <th>User</th>
                                     <th>Comments</th>
                                     <th>Category</th>
@@ -59,7 +60,8 @@
                                         <a href="{{ url('admin/tickets/'. $ticket->ticket_id) }}">
                                             {{ $ticket->title }}
                                         </a>
-                                    </td>  
+                                    </td>
+                                    <td>{{ $ticket->serial }}</td>
                                     <td>{{ $ticket->user->fullname }}</td>                                    
                                     <td><span class="badge">{{ count($ticket->comments) }}</span></td>
                                     <td>
